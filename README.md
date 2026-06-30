@@ -12,6 +12,7 @@
 ## Table of Contents
 
 - [What Is This?](#what-is-this)
+- [Video Showcase](#video-showcase)
 - [Graph Schema](#graph-schema)
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
@@ -25,6 +26,14 @@
 - [Troubleshooting](#troubleshooting)
 - [GraphAcademy Cup Challenge](#graphacademy-cup-challenge)
 - [Licence](#licence)
+
+---
+
+## Video Showcase 🎥
+
+Check out the capabilities and a walkthrough of the dashboard in action:
+
+[![VEIL - Ownership Intelligence Video Showcase](https://img.shields.io/badge/YouTube-Watch%20Video%20Showcase-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Ru50RFEucng)
 
 ---
 

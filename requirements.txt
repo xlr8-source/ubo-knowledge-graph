@@ -1,0 +1,39 @@
+# ============================================================
+# UBO Knowledge Graph – Python Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+
+# Neo4j Python driver – connects to AuraDB Free
+neo4j==5.20.0
+
+# HTTP requests to Companies House REST API
+requests==2.31.0
+
+# Loads secrets from a .env file so you never hard-code credentials
+python-dotenv==1.0.1
+
+# Retry logic and back-off helpers are handled by urllib3 (bundled with requests)
+# No extra retry library needed.
+
+# Pretty progress bars in the terminal
+tqdm==4.66.4
+
+# ── Dashboard (File 9) ────────────────────────────────────────
+
+# Streamlit – the web dashboard framework
+streamlit==1.35.0
+
+# Interactive network graph visualisation (used in the Network tab)
+pyvis==0.3.2
+
+# Graph algorithms and data structures (used by pyvis internally)
+networkx==3.3
+
+# Tabular data display in the dashboard
+pandas==2.2.2
+
+# Standard library modules used (no install needed):
+#   json, os, time, pathlib, datetime, logging, tempfile
+
+# Scientific computing (used by network_analytics for PageRank)
+scipy

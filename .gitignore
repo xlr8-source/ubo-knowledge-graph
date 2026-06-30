@@ -1,0 +1,28 @@
+# Secrets — never commit
+.env
+
+# Runtime-generated — not source
+/data/
+/lib/
+workspace_cases.json
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.user

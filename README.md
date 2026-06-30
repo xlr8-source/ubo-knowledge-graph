@@ -95,6 +95,8 @@ ubo-knowledge-graph/
 │   └── theme.py                # CSS design system & SVG icon library
 ├── tests/
 │   └── test_engines.py         # Unit tests for the scoring & risk engines
+├── docs/
+│   └── screenshots/             # Dashboard screenshots (referenced in README)
 ├── data/                        # Raw JSON company files (auto-created, gitignored)
 │   ├── company_09243948.json
 │   └── ...
@@ -295,12 +297,46 @@ VEIL is organized into six pages:
 | **Workspace** | Bookmark targets, side-by-side company comparison, dossier export |
 | **Query Studio** | A live Cypher editor with 9 grouped AML reference templates — nominee & control patterns, filing & lifecycle gaps, geographic & cluster patterns — plus CSV export |
 
+### Overview
+
+![Overview — Registry Command Center](docs/screenshots/screenshot%201.jpg)
+
+### Network Analysis (within Overview)
+
+![Network Analysis — Global Graph Topology](docs/screenshots/screenshot%202.jpg)
+
+![Network Analysis — Topological Metrics](docs/screenshots/screenshot%203.jpg)
+
+### Entity Explorer
+
+![Entity Explorer — company population panel and selector](docs/screenshots/screenshot%204.jpg)
+
+![Entity Explorer — company drilldown, Beneficial Controls tab](docs/screenshots/screenshot%205.jpg)
+
+### People Intelligence
+
+![People Intelligence — landing panel and person selector](docs/screenshots/screenshot%207.jpg)
+
+### Risk & Analytics
+
+![Risk & Analytics — Compliance Queue tab](docs/screenshots/screenshot%208.jpg)
+
+### Workspace
+
+<!-- SCREENSHOT: Workspace page — Bookmarked Corporations panel + Structure Side-by-Side Deck tab with two companies compared -->
+
+### Query Studio
+
+![Query Studio — AML Cypher templates and live editor](docs/screenshots/screenshot%209.jpg)
+
 ---
 
 ## Visual Structure Graph Features
 
 The **Visual Structure** tab in Entity Explorer (and the Global Graph Topology view in Overview)
 support:
+
+![Visual Structure — pyvis ownership graph with community coloring and spotlight focus](docs/screenshots/screenshot%206.jpg)
 
 - **Spotlight Focus** — fades nodes not directly connected to the selected company
 - **Community Coloring** — colors each node by its Louvain community cluster
@@ -320,13 +356,13 @@ flags:
 
 | Flag | Trigger | Weight |
 |------|---------|--------|
-| No PSC filing | Company has no PSC records | 35 |
-| Dissolved/wound-up status | `status` ∈ {dissolved, wound-up} | 30 |
-| Mass director (nominee risk) | Officer appears at 5+ companies | 25 |
-| No officers | Zero active officer records | 20 |
-| High SIC risk codes | SIC ∈ {64999, 65202, 74909, ...} | 15 |
+| Potential shell structure | Active company with zero active directors | 35 |
+| Adverse company status | `status` ∈ {dissolved, liquidation, receivership} | 30 |
+| Shared address hotspot | Registered address shared by 5+ companies | 25 |
+| No registered PSC | Company has no beneficial ownership filings | 30 |
+| Highly concentrated ownership | Single PSC holds 75–100% control | 20 |
 
-Risk tiers: **CRITICAL** (≥70) · **HIGH** (≥40) · **MEDIUM** (≥20) · **LOW** (<20)
+Risk tiers: **CRITICAL** (≥75) · **HIGH** (≥50) · **MEDIUM** (≥25) · **LOW** (<25)
 
 Query Studio's templates are designed to be additive to this rule set, not a re-derivation of
 it — surfacing patterns like director churn, shadow control, and incorporation mills that aren't
@@ -372,5 +408,3 @@ already covered by a fixed-weight flag.
 ## Licence
 
 MIT – free to use, modify, and share.
-#   V e i l  
- 

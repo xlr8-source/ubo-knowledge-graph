@@ -6,10 +6,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 > **A Neo4j graph database & Streamlit intelligence workbench for mapping UK corporate ownership structures, built on the free Companies House API.**
-
-Built for the [GraphAcademy Cup Community Challenge](https://graphacademy.neo4j.com/graphacademy-cup/).
-The dashboard itself is internally branded **VEIL — Ownership Intelligence** — as in *piercing the corporate veil*, the legal term for what this tool actually does.
-
+> 
 ---
 
 ## Table of Contents

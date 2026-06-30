@@ -399,8 +399,6 @@ already covered by a fixed-weight flag.
 
 ---
 
-## GraphAcademy Cup Challenge
-
 **Key graph concepts demonstrated:**
 
 - Property graph modelling of real UK corporate registry data

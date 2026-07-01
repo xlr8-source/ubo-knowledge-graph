@@ -74,6 +74,8 @@ With it, you can:
 
 Relationship properties carry the dates that make timeline-based queries possible: `appointed_date` / `resigned_date` on `HAS_OFFICER`, and `notified_on` on `HAS_PSC`.
 
+> [!IMPORTANT]
+> **Name-Collision Caveat (Known Limitation):** Officer nodes are merged on `{name, role}` and PSC nodes on `{name}` alone. Two distinct individuals who share the same name (and, for officers, the same role) will be collapsed into a single node, which can produce false-positive cross-company links and inflated risk flags at scale. A production fix would use a composite key of **name + date-of-birth month/year** — fields the Companies House API already exposes — to disambiguate people. This trade-off is intentional for the scope of this demonstration.
 ---
 
 ## Project Structure

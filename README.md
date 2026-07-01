@@ -152,7 +152,7 @@ For anyone who just wants to get running and will figure out the details as they
 walkthrough is in [Detailed Setup](#detailed-setup) below.
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/xlr8-source/ubo-knowledge-graph.git
 cd ubo-knowledge-graph
 
 python -m venv .venv

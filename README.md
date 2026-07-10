@@ -42,6 +42,7 @@ Check out the capabilities and a walkthrough of the dashboard in action:
 **Ultimate Beneficial Ownership (UBO) Knowledge Graph**
 *"Who ultimately owns and controls this company?"*
 
+VEIL is a Neo4j graph database & Streamlit intelligence workbench for mapping corporate ownership structures, built on the UK Companies House API. The architecture is modular by design. Replace the UK Companies House connector with another corporate registry exposing comparable entities and relationships, and the platform can adapt with minimal changes. 
 The main reason behind building VEIL was to reduce the cognitive effort from finding relationships to understanding them. Instead of spending hours navigating records, cross-referencing filings, and piecing together ownership structures, users can focus their attention on interpreting the network and making better-informed decisions.
 
 It fetches real-world data from the UK [Companies House REST API](https://developer.company-information.service.gov.uk/) and models it as a property graph in Neo4j:

@@ -7,10 +7,10 @@
 neo4j==5.20.0
 
 # HTTP requests to Companies House REST API
-requests==2.31.0
+requests==2.33.0
 
 # Loads secrets from a .env file so you never hard-code credentials
-python-dotenv==1.0.1
+python-dotenv==1.2.2
 
 # Retry logic and back-off helpers are handled by urllib3 (bundled with requests)
 # No extra retry library needed.
@@ -21,7 +21,7 @@ tqdm==4.66.4
 # ── Dashboard (File 9) ────────────────────────────────────────
 
 # Streamlit – the web dashboard framework
-streamlit==1.35.0
+streamlit==1.54.0
 
 # Interactive network graph visualisation (used in the Network tab)
 pyvis==0.3.2
